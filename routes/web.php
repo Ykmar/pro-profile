@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\ProfileController::class, 'index'])->name('profile.index');
+Route::get('/download-resume', [\App\Http\Controllers\ProfileController::class, 'downloadResume'])->name('profile.download-resume');
+Route::post('/send-contact', [\App\Http\Controllers\ProfileController::class, 'sendContactMail'])->name('profile.send-contact');
