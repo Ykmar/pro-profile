@@ -3,11 +3,11 @@
 return [
 
     'index' => [
-        'about' => 'À propos',
-        'skills' => 'Compétences',
-        'experiences' => 'Expériences',
-        'contact' => 'Contact',
-        'download_resume' => 'Télécharger mon CV',
+        'about' => 'À PROPOS',
+        'skills' => 'MES COMPÉTENCES',
+        'experiences' => 'MES EXPÉRIENCES',
+        'contact' => 'ME CONTACTER',
+        'download_resume' => 'TÉLÉCHARGER MON CV',
     ],
 
 ];

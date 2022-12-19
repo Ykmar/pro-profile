@@ -3,11 +3,11 @@
 return [
 
     'index' => [
-        'about' => 'About',
-        'skills' => 'Skills',
-        'experiences' => 'Experiences',
-        'contact' => 'Contact',
-        'download_resume' => 'Download my resume',
+        'about' => 'ABOUT',
+        'skills' => 'MY SKILLS',
+        'experiences' => 'MY EXPERIENCES',
+        'contact' => 'CONTACT ME',
+        'download_resume' => 'DOWNLOAD MY RESUME',
     ],
 
 ];
