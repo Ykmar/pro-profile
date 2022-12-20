@@ -4,19 +4,41 @@
 
 @media (min-width: 1024px) {
     header {
-        height: 43.75rem;
+        height: 45rem;
+    }
+
+    .services {
+        width: 60rem;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     header {
         height: 30rem;
     }
+
+    .services {
+        width: 45rem;
+    }
 }
 
-@media (min-width: 320px) {
+@media (min-width: 640px) and (max-width: 768px) {
+    header {
+        height: 30rem;
+    }
+
+    .services {
+        width: 35rem;
+    }
+}
+
+@media (max-width: 640px) {
     header {
         height: 15rem;
+    }
+
+    .services {
+        width: 15rem;
     }
 }
 

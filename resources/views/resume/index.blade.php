@@ -7,7 +7,7 @@
     @vite('resources/css/app.css')
 </head>
 <body class="antialiased bg-white">
-    <nav class="flex items-center justify-between flex-wrap bg-white text-blue-800 p-4">
+    <nav class="flex sticky z-20 top-0 absolute items-center justify-between flex-wrap bg-white text-blue-800 p-4">
         <div class="block lg:hidden">
             <button class="flex items-center px-3 py-2 border rounded border-teal-400 navbar-burger">
                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -43,10 +43,10 @@
     <header>
         <div class="flex-column w-full h-full">
             <div class="relative z-0 banner"></div>
-            <div class="relative flex justify-evenly z-60 bottom-8">
-                <div class="shadow font-bold inline-block md:px-2 md:py-2 lg:px-8 lg:py-8 leading-none border rounded text-blue-800 bg-white">AUDIT TECHNIQUE</div>
-                <div class="shadow font-bold inline-block md:px-2 md:py-2 lg:px-8 lg:py-8 leading-none border rounded text-blue-800 bg-white">DEVELOPPEMENT D'APPLICATIONS</div>
-                <div class="shadow font-bold inline-block md:px-2 md:py-2 lg:px-8 lg:py-8 leading-none border rounded text-blue-800 bg-white">SUIVI DE PROJETS</div>
+            <div class="relative block sm:flex md:flex lg:flex justify-around z-10 bottom-8 services m-auto">
+                <div class="shadow font-bold lg:text-xl mb-2 sm:mb-0 md:mb-0 lg:mb-0 sm:w-44 md:w-52 lg:w-72 px-4 py-4 lg:px-8 lg:py-8 leading-none border rounded text-blue-800 bg-white text-center m-auto">{!! __('resume.index.services.audit')  !!}</div>
+                <div class="shadow font-bold lg:text-xl mb-2 sm:mb-0 md:mb-0 lg:mb-0 sm:w-44 md:w-52 lg:w-72 px-4 py-4 lg:px-8 lg:py-8 leading-none border rounded text-blue-800 bg-white text-center m-auto">{!! __('resume.index.services.dev')  !!}</div>
+                <div class="shadow font-bold lg:text-xl sm:w-44 md:w-52 lg:w-72 px-4 py-4 lg:px-8 lg:py-8 leading-none border rounded text-blue-800 bg-white text-center m-auto">{!! __('resume.index.services.project')  !!}</div>
             </div>
         </div>
     </header>

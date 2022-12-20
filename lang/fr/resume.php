@@ -8,6 +8,11 @@ return [
         'experiences' => 'MES EXPÉRIENCES',
         'contact' => 'ME CONTACTER',
         'download_resume' => 'TÉLÉCHARGER MON CV',
+        'services' => [
+            'audit' => 'AUDIT<br/>TECHNIQUE',
+            'dev' => 'DÉVELOPPEMENT<br/>D\'APPLICATIONS',
+            'project' => 'SUIVI<br/>DE PROJETS'
+        ],
     ],
 
 ];
