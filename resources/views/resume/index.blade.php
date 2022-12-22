@@ -159,50 +159,28 @@
             </div>
         </div>
     </div>
-    <div class="w-3/4 mt-20 sm:mt-16 lg:mt-28 m-auto">
+    <div class="w-1/2 sm:w-1/4 md:w-1/4 lg:w-3/4 mt-20 sm:mt-16 lg:mt-28 m-auto">
         <h1 class="text-3xl text-blue-800 text-center mb-4">{{ __('resume.index.skills') }}</h1>
-        <div class="block lg:flex justify-around mt-16">
-            <div class="shadow font-bold text-3xl px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
-                <i class="fa-brands fa-laravel"></i>
-                <p>Laravel</p>
+        <div class="block text-center lg:flex justify-around mt-16">
+            <div class="shadow px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
+                <i class="fa-brands fa-php text-3xl"></i>
+                <p class="text-xl">PHP</p>
             </div>
-            <div class="shadow font-bold text-3xl px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
-                <i class="fa-brands fa-laravel"></i>
-                <p>Laravel</p>
+            <div class="shadow px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
+                <i class="fa-brands fa-laravel text-3xl"></i>
+                <p class="text-xl">Laravel</p>
             </div>
-            <div class="shadow font-bold text-3xl px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
-                <i class="fa-brands fa-laravel"></i>
-                <p>Laravel</p>
+            <div class="shadow px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
+                <i class="fa-brands fa-symfony text-3xl"></i>
+                <p class="text-xl">Symfony</p>
             </div>
-            <div class="shadow font-bold text-3xl px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
-                <i class="fa-brands fa-laravel"></i>
-                <p>Laravel</p>
+            <div class="shadow px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
+                <i class="fa-brands fa-vuejs text-3xl"></i>
+                <p class="text-xl">VueJS</p>
             </div>
-            <div class="shadow font-bold text-3xl px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
-                <i class="fa-brands fa-laravel"></i>
-                <p>Laravel</p>
-            </div>
-        </div>
-        <div class="block lg:flex justify-around mt-16">
-            <div class="shadow font-bold text-3xl px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
-                <i class="fa-brands fa-laravel"></i>
-                <p>Laravel</p>
-            </div>
-            <div class="shadow font-bold text-3xl px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
-                <i class="fa-brands fa-laravel"></i>
-                <p>Laravel</p>
-            </div>
-            <div class="shadow font-bold text-3xl px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
-                <i class="fa-brands fa-laravel"></i>
-                <p>Laravel</p>
-            </div>
-            <div class="shadow font-bold text-3xl px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
-                <i class="fa-brands fa-laravel"></i>
-                <p>Laravel</p>
-            </div>
-            <div class="shadow font-bold text-3xl px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
-                <i class="fa-brands fa-laravel"></i>
-                <p>Laravel</p>
+            <div class="shadow px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
+                <i class="fa-brands fa-node text-3xl"></i>
+                <p class="text-xl">Node</p>
             </div>
         </div>
     </div>
