@@ -4,7 +4,19 @@ return [
 
     'index' => [
         'about' => 'ABOUT',
-        'skills' => 'MY SKILLS',
+        'skills' => [
+            'title' => 'MY SKILLS',
+            'php' => 'PHP',
+            'laravel' => 'Laravel',
+            'symfony' => 'Symfony',
+            'vue' => 'VueJS',
+            'node' => 'Node',
+            'cicd' => 'CI/CD',
+            'versions' => 'Versions',
+            'linux' => 'Linux',
+            'code_review' => 'Code review',
+            'static_analysis' => 'Static analysis',
+        ],
         'experiences' => 'MY EXPERIENCES',
         'contact' => 'CONTACT ME',
         'download_resume' => 'DOWNLOAD MY RESUME',
@@ -13,6 +25,8 @@ return [
             'dev' => 'APPLICATION<br/>DEVELOPMENT',
             'project' => 'PROJECT<br/>MONITORING'
         ],
+        'legal' => 'Legal Notice',
+        'rgpd' => 'Privacy Policy',
     ],
 
 ];

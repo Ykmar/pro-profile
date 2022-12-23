@@ -23,7 +23,7 @@
                     {{ __('resume.index.about') }}
                 </a>
                 <a href="" class="block lg:inline-block lg:mt-0 hover:text-blue-900 mr-5">
-                    {{ __('resume.index.skills') }}
+                    {{ __('resume.index.skills.title') }}
                 </a>
                 <a href="" class="block lg:inline-block lg:mt-0 hover:text-blue-900 mr-5">
                     {{ __('resume.index.experiences') }}
@@ -159,31 +159,30 @@
             </div>
         </div>
     </div>
-    <div class="w-1/2 sm:w-1/4 md:w-1/4 lg:w-3/4 mt-20 sm:mt-16 lg:mt-28 m-auto">
-        <h1 class="text-3xl text-blue-800 text-center mb-4">{{ __('resume.index.skills') }}</h1>
-        <div class="block text-center lg:flex justify-around mt-16">
-            <div class="shadow px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
-                <i class="fa-brands fa-php text-3xl"></i>
-                <p class="text-xl">PHP</p>
-            </div>
-            <div class="shadow px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
-                <i class="fa-brands fa-laravel text-3xl"></i>
-                <p class="text-xl">Laravel</p>
-            </div>
-            <div class="shadow px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
-                <i class="fa-brands fa-symfony text-3xl"></i>
-                <p class="text-xl">Symfony</p>
-            </div>
-            <div class="shadow px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
-                <i class="fa-brands fa-vuejs text-3xl"></i>
-                <p class="text-xl">VueJS</p>
-            </div>
-            <div class="shadow px-12 py-8 leading-none border rounded text-white bg-blue-800 text-center m-auto">
-                <i class="fa-brands fa-node text-3xl"></i>
-                <p class="text-xl">Node</p>
-            </div>
+    <div class="w-full sm:w-3/4 md:w-3/4 lg:w-2/3 mt-20 sm:mt-16 lg:mt-28 m-auto">
+        <h1 class="text-3xl text-blue-800 text-center mb-4">{{ __('resume.index.skills.title') }}</h1>
+        <div class="flex text-center justify-around mt-16">
+            <x-skill :icon="'fa-brands fa-php'" :skill="'php'"></x-skill>
+            <x-skill :icon="'fa-brands fa-laravel'" :skill="'laravel'"></x-skill>
+            <x-skill :icon="'fa-brands fa-symfony'" :skill="'symfony'"></x-skill>
+            <x-skill :icon="'fa-brands fa-vuejs'" :skill="'vue'"></x-skill>
+            <x-skill :icon="'fa-brands fa-node'" :skill="'node'"></x-skill>
+        </div>
+        <div class="flex text-center justify-around mt-8">
+            <x-skill :icon="'fa-solid fa-infinity'" :skill="'cicd'"></x-skill>
+            <x-skill :icon="'fa-brands fa-git'" :skill="'versions'"></x-skill>
+            <x-skill :icon="'fa-brands fa-linux'" :skill="'linux'"></x-skill>
+            <x-skill :icon="'fa-solid fa-code'" :skill="'code_review'"></x-skill>
+            <x-skill :icon="'fa-solid fa-magnifying-glass-chart'" :skill="'static_analysis'"></x-skill>
         </div>
     </div>
+    <footer class="bg-blue-900 text-center lg:text-left">
+        <div class="text-white text-center p-4" style="background-color: rgba(0, 0, 0, 0.3);">
+            <a class="hover:text-gray-200" href="#">{{ __('resume.index.legal') }}</a>
+            |
+            <a class="hover:text-gray-200" href="#">{{ __('resume.index.rgpd') }}</a>
+        </div>
+    </footer>
 {{--    <div class="container mx-auto grid grid-cols-1">--}}
 {{--        <div class="mr-4 ml-4">--}}
 {{--            <h2 class="text-2xl text-white font-bold text-center mt-4 mb-4">{{ __('resume.index.experiences') }}</h2>--}}
