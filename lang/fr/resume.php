@@ -25,7 +25,7 @@ return [
             'dev' => 'DÉVELOPPEMENT<br/>D\'APPLICATIONS',
             'project' => 'SUIVI<br/>DE PROJETS'
         ],
-        'legal' => 'Mentions Légales',
+        'legal' => 'Mentions légales',
         'rgpd' => 'Politique de confidentialité',
     ],
 

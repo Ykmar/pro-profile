@@ -17,8 +17,8 @@
             </button>
         </div>
         <div class="w-full block flex-grow lg:flex lg:w-auto navbar-menu hidden">
-            <div class="text-3xl hidden lg:block mt-2">MC</div>
-            <div class="text-xl lg:flex-grow lg:flex lg:justify-center mt-3">
+            <div class="text-3xl hidden lg:block mt-2 lg:w-2/12">MC</div>
+            <div class="lg:text-xl lg:flex-grow lg:flex lg:justify-center mt-3 lg:w-8/12">
                 <a href="" class="block lg:inline-block lg:mt-0 hover:text-blue-900 mr-5">
                     {{ __('resume.index.about') }}
                 </a>
@@ -32,8 +32,8 @@
                     {{ __('resume.index.contact') }}
                 </a>
             </div>
-            <div class="mt-1">
-                <a href="{{ route('resume.download') }}" class="inline-block text-sm px-4 py-4 leading-none border rounded font-bold text-white bg-blue-800 hover:border-transparent hover:bg-blue-900 lg:mt-0">
+            <div class="mt-1 lg:text-right lg:w-2/12">
+                <a href="{{ route('resume.download') }}" class="inline-block text-xs px-2 py-4 leading-none border rounded font-bold text-white bg-blue-800 hover:border-transparent hover:bg-blue-900 lg:mt-0">
                     {{ __('resume.index.download_resume') }}
                 </a>
             </div>
@@ -151,7 +151,7 @@
                 </svg>
             </div>
             <div class="w-full text-blue-800 px-4 py-4">
-                <h1 class="text-3xl text-center lg:text-left mb-4">{{ __('resume.index.about') }}</h1>
+                <h2 class="text-3xl text-center lg:text-left mb-4">{{ __('resume.index.about') }}</h2>
                 <p class="text-xl">Excogitatum est super his, ut homines quidam ignoti, vilitate ipsa parum cavendi ad colligendos rumores per Antiochiae latera cuncta destinarentur relaturi quae audirent. hi peragranter et dissimulanter honoratorum circulis adsistendo pervadendoque divites domus egentium habitu quicquid noscere poterant vel audire latenter intromissi per posticas in regiam nuntiabant, id observantes conspiratione concordi, ut fingerent quaedam et cognita duplicarent in peius, laudes vero supprimerent Caesaris, quas invitis conpluribus formido malorum inpendentium exprimebat.</p>
                 <button class="inline-block text-sm font-bold px-4 py-4 leading-none border rounded text-white bg-blue-800 hover:border-transparent hover:bg-blue-900 mt-4">
                     {{ __('resume.index.contact') }}
@@ -159,8 +159,8 @@
             </div>
         </div>
     </div>
-    <div class="w-full sm:w-3/4 md:w-3/4 lg:w-2/3 mt-20 sm:mt-16 lg:mt-28 m-auto">
-        <h1 class="text-3xl text-blue-800 text-center mb-4">{{ __('resume.index.skills.title') }}</h1>
+    <div class="skills mt-20 sm:mt-16 lg:mt-28 m-auto">
+        <h2 class="text-3xl text-blue-800 text-center mb-4">{{ __('resume.index.skills.title') }}</h2>
         <div class="flex text-center justify-around mt-16">
             <x-skill :icon="'fa-brands fa-php'" :skill="'php'"></x-skill>
             <x-skill :icon="'fa-brands fa-laravel'" :skill="'laravel'"></x-skill>
@@ -174,6 +174,55 @@
             <x-skill :icon="'fa-brands fa-linux'" :skill="'linux'"></x-skill>
             <x-skill :icon="'fa-solid fa-code'" :skill="'code_review'"></x-skill>
             <x-skill :icon="'fa-solid fa-magnifying-glass-chart'" :skill="'static_analysis'"></x-skill>
+        </div>
+    </div>
+    <div class="bg-blue-200 mt-20 sm:mt-16 lg:mt-28">
+        <h2 class="text-3xl text-blue-800 text-center py-20 sm:py-16 lg:py-28">{{ __('resume.index.experiences') }}</h2>
+        <ol class="items-center block lg:flex lg:justify-center sm:w-1/2 md:w-1/2 lg:w-full p-12 m-auto">
+            <x-experience :experience="'Diplôme BTS Développement Web'" :time="'Juillet 2017'"></x-experience>
+            <x-experience :experience="'Développeur chez Nameshield'" :time="'Novembre 2017'"></x-experience>
+            <x-experience :experience="'Responsable d\'applications chez Nameshield'" :time="'Octobre 2020'"></x-experience>
+            <x-experience :experience="'Développeur en freelance'" :time="'Depuis Mai 2023'"></x-experience>
+        </ol>
+    </div>
+    <div class="w-full block md:flex lg:flex">
+        <div class="w-full md:w-5/12 lg:w-5/12 bg-blue-800 p-6">
+            <h2 class="text-3xl text-blue-200 text-center pb-10 pt-20 sm:pt-16 lg:pt-28">MC</h2>
+            <p class="text-white pb-10 sm:pb-8 lg:pb-14">Excogitatum est super his, ut homines quidam ignoti, vilitate ipsa parum cavendi ad colligendos rumores per Antiochiae latera cuncta destinarentur relaturi quae audirent. hi peragranter et dissimulanter honoratorum circulis adsistendo pervadendoque divites domus egentium habitu quicquid</p>
+            <h2 class="text-3xl text-white text-center pb-10">ME SUIVRE</h2>
+            <div class="text-center">
+                <a class="text-3xl text-white pb-10" href="#">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="w-full md:w-7/12 lg:w-7/12 p-6">
+            <h2 class="text-3xl text-blue-800 text-center pb-10 pt-20 sm:pt-16 lg:pt-28">{{ __('resume.index.contact') }}</h2>
+            <form class="lg:mx-auto lg:max-w-md " action="{{ route('resume.contact') }}" method="post">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-500 text-sm font-bold mb-2">{{ __('global.name') }}</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <div class="mb-4">
+                    <label for="firstname" class="block text-gray-500 text-sm font-bold mb-2">{{ __('global.firstname') }}</label>
+                    <input type="text" id="firstname" name="firstname" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-500 text-sm font-bold mb-2">{{ __('global.email') }}</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <div class="mb-4">
+                    <label for="phone" class="block text-gray-500 text-sm font-bold mb-2">{{ __('global.phone') }}</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-500 text-sm font-bold mb-2">{{ __('global.message') }}</label>
+                    <textarea id="message" name="message" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" rows="4" required></textarea>
+                </div>
+                <div class="mb-4">
+                    <button type="submit" class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">{{ __('global.send') }}</button>
+                </div>
+            </form>
         </div>
     </div>
     <footer class="bg-blue-900 text-center lg:text-left">

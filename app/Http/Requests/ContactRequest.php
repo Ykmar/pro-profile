@@ -12,6 +12,7 @@ class ContactRequest extends FormRequest
             'name' => 'required|string',
             'firstname' => 'required|string',
             'email' => 'required|email',
+            'phone' => 'nullable|regex:/(01)[0-9]{9}/',
             'message' => 'required|string|max:5000'
         ];
     }
