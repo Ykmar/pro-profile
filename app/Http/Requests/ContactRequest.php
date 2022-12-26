@@ -12,8 +12,15 @@ class ContactRequest extends FormRequest
             'name' => 'required|string',
             'firstname' => 'required|string',
             'email' => 'required|email',
-            'phone' => 'nullable|regex:/(01)[0-9]{9}/',
+            'phone' => 'nullable|numeric|min:10',
             'message' => 'required|string|max:5000'
         ];
+    }
+
+    protected function getRedirectUrl(): string
+    {
+        $url = $this->redirector->getUrlGenerator();
+
+        return $url->previous() . '#contact';
     }
 }

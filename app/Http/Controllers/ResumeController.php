@@ -23,8 +23,10 @@ class ResumeController extends Controller
 
     public function contact(ContactRequest $request): RedirectResponse
     {
+        // send mail
 
-
-        return redirect()->route('resume.index');
+        return redirect()->route('resume.index')
+            ->withFragment('contact')
+            ->with('success', __('resume.index.contact.success'));
     }
 }

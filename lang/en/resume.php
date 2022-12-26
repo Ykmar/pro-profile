@@ -18,7 +18,11 @@ return [
             'static_analysis' => 'Static analysis',
         ],
         'experiences' => 'MY EXPERIENCES',
-        'contact' => 'CONTACT ME',
+        'contact' => [
+            'title' => 'CONTACT ME',
+            'mandatory_fields_notice' => 'Fields followed by an * are mandatory',
+            'success' => 'Thank you !! Your contact request has been sent',
+        ],
         'download_resume' => 'DOWNLOAD MY RESUME',
         'services' => [
             'audit' => 'TECHNICAL<br/>AUDIT',

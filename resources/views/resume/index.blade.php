@@ -19,17 +19,17 @@
         <div class="w-full block flex-grow lg:flex lg:w-auto navbar-menu hidden">
             <div class="text-3xl hidden lg:block mt-2 lg:w-2/12">MC</div>
             <div class="lg:text-xl lg:flex-grow lg:flex lg:justify-center mt-3 lg:w-8/12">
-                <a href="" class="block lg:inline-block lg:mt-0 hover:text-blue-900 mr-5">
+                <a onclick="scrollToHeading('about')" class="block cursor-pointer lg:inline-block lg:mt-0 hover:text-blue-900 mr-5">
                     {{ __('resume.index.about') }}
                 </a>
-                <a href="" class="block lg:inline-block lg:mt-0 hover:text-blue-900 mr-5">
+                <a onclick="scrollToHeading('skills')" class="block cursor-pointer lg:inline-block lg:mt-0 hover:text-blue-900 mr-5">
                     {{ __('resume.index.skills.title') }}
                 </a>
-                <a href="" class="block lg:inline-block lg:mt-0 hover:text-blue-900 mr-5">
+                <a onclick="scrollToHeading('experiences')" class="block cursor-pointer lg:inline-block lg:mt-0 hover:text-blue-900 mr-5">
                     {{ __('resume.index.experiences') }}
                 </a>
-                <a href="" class="block lg:inline-block lg:mt-0 hover:text-blue-900 mr-5">
-                    {{ __('resume.index.contact') }}
+                <a onclick="scrollToHeading('contact')" class="block cursor-pointer lg:inline-block lg:mt-0 hover:text-blue-900 mr-5">
+                    {{ __('resume.index.contact.title') }}
                 </a>
             </div>
             <div class="mt-1 lg:text-right lg:w-2/12">
@@ -50,7 +50,7 @@
             </div>
         </div>
     </header>
-    <div class="w-full mt-60 sm:mt-28 md:mt-36 lg:mt-72">
+    <div id="about" class="w-full mt-60 sm:mt-28 md:mt-36 lg:mt-72">
         <div class="block lg:flex justify-around m-auto">
             <div class="w-full">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 759.015 489">
@@ -154,12 +154,12 @@
                 <h2 class="text-3xl text-center lg:text-left mb-4">{{ __('resume.index.about') }}</h2>
                 <p class="text-xl">Excogitatum est super his, ut homines quidam ignoti, vilitate ipsa parum cavendi ad colligendos rumores per Antiochiae latera cuncta destinarentur relaturi quae audirent. hi peragranter et dissimulanter honoratorum circulis adsistendo pervadendoque divites domus egentium habitu quicquid noscere poterant vel audire latenter intromissi per posticas in regiam nuntiabant, id observantes conspiratione concordi, ut fingerent quaedam et cognita duplicarent in peius, laudes vero supprimerent Caesaris, quas invitis conpluribus formido malorum inpendentium exprimebat.</p>
                 <button class="inline-block text-sm font-bold px-4 py-4 leading-none border rounded text-white bg-blue-800 hover:border-transparent hover:bg-blue-900 mt-4">
-                    {{ __('resume.index.contact') }}
+                    {{ __('resume.index.contact.title') }}
                 </button>
             </div>
         </div>
     </div>
-    <div class="skills mt-20 sm:mt-16 lg:mt-28 m-auto">
+    <div id="skills" class="skills mt-20 sm:mt-16 lg:mt-28 m-auto">
         <h2 class="text-3xl text-blue-800 text-center mb-4">{{ __('resume.index.skills.title') }}</h2>
         <div class="flex text-center justify-around mt-16">
             <x-skill :icon="'fa-brands fa-php'" :skill="'php'"></x-skill>
@@ -176,7 +176,7 @@
             <x-skill :icon="'fa-solid fa-magnifying-glass-chart'" :skill="'static_analysis'"></x-skill>
         </div>
     </div>
-    <div class="bg-blue-200 mt-20 sm:mt-16 lg:mt-28">
+    <div id="experiences" class="bg-blue-200 mt-20 sm:mt-16 lg:mt-28">
         <h2 class="text-3xl text-blue-800 text-center py-20 sm:py-16 lg:py-28">{{ __('resume.index.experiences') }}</h2>
         <ol class="items-center block lg:flex lg:justify-center sm:w-1/2 md:w-1/2 lg:w-full p-12 m-auto">
             <x-experience :experience="'Diplôme BTS Développement Web'" :time="'Juillet 2017'"></x-experience>
@@ -196,28 +196,54 @@
                 </a>
             </div>
         </div>
-        <div class="w-full md:w-7/12 lg:w-7/12 p-6">
-            <h2 class="text-3xl text-blue-800 text-center pb-10 pt-20 sm:pt-16 lg:pt-28">{{ __('resume.index.contact') }}</h2>
-            <form class="lg:mx-auto lg:max-w-md " action="{{ route('resume.contact') }}" method="post">
+        <div id="contact" class="w-full md:w-7/12 lg:w-7/12 p-6">
+            <h2 class="text-3xl text-blue-800 text-center pb-10 pt-20 sm:pt-16 lg:pt-28">{{ __('resume.index.contact.title') }}</h2>
+            @if (session()->has('success'))
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative lg:mx-auto lg:max-w-md mb-4 mt-4" role="alert">
+                    <span class="block sm:inline">{{ session()->get('success') }}</span>
+                </div>
+            @endif
+            <form class="lg:mx-auto lg:max-w-md" action="{{ route('resume.contact') }}" method="post">
+                @csrf
                 <div class="mb-4">
-                    <label for="name" class="block text-gray-500 text-sm font-bold mb-2">{{ __('global.name') }}</label>
-                    <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" required>
+                    <label for="name" class="block text-gray-500 text-sm font-bold mb-2">{{ __('global.name') }}*</label>
+                    <input type="text" id="name" name="name" value="{{ old('name') }}" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" required>
+                    @if ($errors->has('name'))
+                        <p class="text-red-500">{{ $errors->first('name') }}</p>
+                    @endif
                 </div>
                 <div class="mb-4">
-                    <label for="firstname" class="block text-gray-500 text-sm font-bold mb-2">{{ __('global.firstname') }}</label>
-                    <input type="text" id="firstname" name="firstname" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" required>
+                    <label for="firstname" class="block text-gray-500 text-sm font-bold mb-2">{{ __('global.firstname') }}*</label>
+                    <input type="text" id="firstname" name="firstname" value="{{ old('firstname') }}" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" required>
+                    @if ($errors->has('firstname'))
+                        <p class="text-red-500">{{ $errors->first('firstname') }}</p>
+                    @endif
                 </div>
                 <div class="mb-4">
-                    <label for="email" class="block text-gray-500 text-sm font-bold mb-2">{{ __('global.email') }}</label>
-                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" required>
+                    <label for="email" class="block text-gray-500 text-sm font-bold mb-2">{{ __('global.email') }}*</label>
+                    <input type="email" id="email" name="email" value="{{ old('email') }}" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" required>
+                    @if ($errors->has('email'))
+                        <p class="text-red-500">{{ $errors->first('email') }}</p>
+                    @endif
                 </div>
                 <div class="mb-4">
                     <label for="phone" class="block text-gray-500 text-sm font-bold mb-2">{{ __('global.phone') }}</label>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+                    <input type="tel" id="phone" name="phone" value="{{ old('phone') }}" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+                    @if ($errors->has('phone'))
+                        <p class="text-red-500">{{ $errors->first('phone') }}</p>
+                    @endif
                 </div>
                 <div class="mb-4">
-                    <label for="message" class="block text-gray-500 text-sm font-bold mb-2">{{ __('global.message') }}</label>
-                    <textarea id="message" name="message" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" rows="4" required></textarea>
+                    <label for="message" class="block text-gray-500 text-sm font-bold mb-2">{{ __('global.message') }}*</label>
+                    <textarea id="message" name="message" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" rows="4" required>
+                        {{ old('message') }}
+                    </textarea>
+                    @if ($errors->has('message'))
+                        <p class="text-red-500">{{ $errors->first('message') }}</p>
+                    @endif
+                </div>
+                <div class="mb-4">
+                    <p class="text-xs text-gray-500">{{ __('resume.index.contact.mandatory_fields_notice') }}</p>
                 </div>
                 <div class="mb-4">
                     <button type="submit" class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">{{ __('global.send') }}</button>
@@ -232,35 +258,16 @@
             <a class="hover:text-gray-200" href="#">{{ __('resume.index.rgpd') }}</a>
         </div>
     </footer>
-{{--    <div class="container mx-auto grid grid-cols-1">--}}
-{{--        <div class="mr-4 ml-4">--}}
-{{--            <h2 class="text-2xl text-white font-bold text-center mt-4 mb-4">{{ __('resume.index.experiences') }}</h2>--}}
-{{--        </div>--}}
-{{--        <div class="mr-4 ml-4">--}}
-{{--            <h2 class="text-2xl text-white font-bold text-center mt-4 mb-4">{{ __('resume.index.contact') }}</h2>--}}
-{{--            <form class="lg:mx-auto lg:max-w-md " action="{{ route('resume.contact') }}" method="post">--}}
-{{--                <div class="mb-4">--}}
-{{--                    <label for="name" class="block text-gray-500 text-sm font-bold mb-2">{{ __('global.name') }}</label>--}}
-{{--                    <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" required>--}}
-{{--                </div>--}}
-{{--                <div class="mb-4">--}}
-{{--                    <label for="firstname" class="block text-gray-500 text-sm font-bold mb-2">{{ __('global.firstname') }}</label>--}}
-{{--                    <input type="text" id="firstname" name="firstname" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" required>--}}
-{{--                </div>--}}
-{{--                <div class="mb-4">--}}
-{{--                    <label for="email" class="block text-gray-500 text-sm font-bold mb-2">{{ __('global.email') }}</label>--}}
-{{--                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" required>--}}
-{{--                </div>--}}
-{{--                <div class="mb-4">--}}
-{{--                    <label for="message" class="block text-gray-500 text-sm font-bold mb-2">{{ __('global.message') }}</label>--}}
-{{--                    <textarea id="message" name="message" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" rows="4" required></textarea>--}}
-{{--                </div>--}}
-{{--                <div class="mb-4">--}}
-{{--                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">{{ __('global.send') }}</button>--}}
-{{--                </div>--}}
-{{--            </form>--}}
-{{--        </div>--}}
-{{--    </div>--}}
     @vite('resources/js/app.js')
 </body>
 </html>
+<script type="application/javascript">
+    function scrollToHeading(id) {
+        const div = document.getElementById(id);
+        div.scrollIntoView({
+            block: 'end',
+            behavior: 'smooth',
+            inline: 'start'
+        });
+    }
+</script>

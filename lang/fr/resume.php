@@ -18,7 +18,11 @@ return [
             'static_analysis' => 'Analyse statique',
         ],
         'experiences' => 'MES EXPÉRIENCES',
-        'contact' => 'ME CONTACTER',
+        'contact' => [
+            'title' => 'ME CONTACTER',
+            'mandatory_fields_notice' => 'Les champs suivis d\'un * sont obligatoires',
+            'success' => 'Merci !! Votre demande de contact a bien été envoyée',
+        ],
         'download_resume' => 'TÉLÉCHARGER MON CV',
         'services' => [
             'audit' => 'AUDIT<br/>TECHNIQUE',
