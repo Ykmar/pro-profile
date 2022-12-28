@@ -10,7 +10,9 @@ class Skill extends Component
 {
     public function __construct(
         public string $icon,
-        public string $skill
+        public string $skill,
+        public string $background,
+        public string $border
     ) {
     }
 
