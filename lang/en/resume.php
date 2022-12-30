@@ -3,6 +3,7 @@
 return [
 
     'index' => [
+        'title' => 'PHP Developer',
         'about' => 'ABOUT',
         'skills' => [
             'title' => 'MY SKILLS',
@@ -20,6 +21,9 @@ return [
         'experiences' => 'MY EXPERIENCES',
         'contact' => [
             'title' => 'CONTACT ME',
+            'work_with_me' => 'Want to work with me ?',
+            'ask_infos' => 'Contact me for any further information.',
+            'follow' => 'FOLLOW ME',
             'mandatory_fields_notice' => 'Fields followed by an * are mandatory',
             'success' => 'Thank you !! Your contact request has been sent',
         ],

@@ -7,6 +7,32 @@
 @tailwind components;
 @tailwind utilities;
 
+.banner {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../public/images/header.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    background-image: url('../../public/images/logo-v1.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo-white {
+    background-image: url('../../public/images/logo-v1-white.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about {
+    background-image: url('../../public/images/about.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 @media (min-width: 1024px) {
     header {
         height: 45rem;
@@ -61,24 +87,4 @@
     .skills {
         width: 20rem;
     }
-}
-
-.banner {
-    width: 100%;
-    height: 100%;
-    background-image: url('../../public/images/header.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.logo {
-    background-image: url('../../public/images/logo-v1.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.about {
-    background-image: url('../../public/images/about.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
 }

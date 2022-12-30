@@ -3,6 +3,7 @@
 return [
 
     'index' => [
+        'title' => 'Développeur PHP',
         'about' => 'À PROPOS',
         'skills' => [
             'title' => 'MES COMPÉTENCES',
@@ -20,6 +21,9 @@ return [
         'experiences' => 'MES EXPÉRIENCES',
         'contact' => [
             'title' => 'ME CONTACTER',
+            'work_with_me' => 'Envie de travailler avec moi ?',
+            'ask_infos' => 'N\'hésitez pas à me contacter pour tout renseignement complémentaire.',
+            'follow' => 'ME SUIVRE',
             'mandatory_fields_notice' => 'Les champs suivis d\'un * sont obligatoires',
             'success' => 'Merci !! Votre demande de contact a bien été envoyée',
         ],
