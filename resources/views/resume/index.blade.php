@@ -178,6 +178,7 @@
         </div>
     </footer>
     @vite('resources/js/app.js')
+    @include('cookie-consent::index')
 </body>
 </html>
 <script type="application/javascript">

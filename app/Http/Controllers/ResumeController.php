@@ -3,12 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactRequest;
+use App\Mail\RequestContact;
+use Illuminate\Config\Repository as Config;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 class ResumeController extends Controller
 {
+    public function __construct(
+        private Config $config,
+    ) {
+    }
+
     public function index(): View
     {
         return view('resume.index');
@@ -23,7 +31,9 @@ class ResumeController extends Controller
 
     public function contact(ContactRequest $request): RedirectResponse
     {
-        // send mail
+        $mail = new RequestContact($request->validated());
+
+        Mail::to($this->config->get('mail.from.address'))->send($mail);
 
         return redirect()->route('resume.index')
             ->withFragment('contact')
