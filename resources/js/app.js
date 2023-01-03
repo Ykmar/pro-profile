@@ -1,5 +1,14 @@
 import './bootstrap';
 
+function scrollToHeading(id) {
+    const div = document.getElementById(id);
+    div.scrollIntoView({
+        block: 'end',
+        behavior: 'smooth',
+        inline: 'start'
+    });
+}
+
 // Burger menu
 document.addEventListener('DOMContentLoaded', function() {
     const burger = document.querySelectorAll('.navbar-burger');
@@ -21,4 +30,16 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+
+    const navElements = document.querySelectorAll('.nav');
+
+    navElements.forEach(function(navElement) {
+        navElement.addEventListener('click', function() {
+            if (document.location.pathname !== '/') {
+                document.location.href = navElement.getAttribute('data-href');
+            }
+
+            scrollToHeading(navElement.getAttribute('data-target'));
+        });
+    });
 });

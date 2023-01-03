@@ -33,7 +33,7 @@ return [
             'dev' => 'APPLICATION<br/>DEVELOPMENT',
             'project' => 'PROJECT<br/>MONITORING'
         ],
-        'legal' => 'Legal Notice',
+        'legals' => 'Legal Notice',
         'rgpd' => 'Privacy Policy',
     ],
 

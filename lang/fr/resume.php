@@ -33,7 +33,7 @@ return [
             'dev' => 'DÉVELOPPEMENT<br/>D\'APPLICATIONS',
             'project' => 'SUIVI<br/>DE PROJETS'
         ],
-        'legal' => 'Mentions légales',
+        'legals' => 'Mentions légales',
         'rgpd' => 'Politique de confidentialité',
     ],
 

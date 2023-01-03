@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\ResumeController::class, 'index'])->name('resume.index');
 Route::get('/download', [\App\Http\Controllers\ResumeController::class, 'download'])->name('resume.download');
 Route::post('/contact', [\App\Http\Controllers\ResumeController::class, 'contact'])->name('resume.contact');
+
+Route::get('/legals', \App\Http\Controllers\LegalsController::class)->name('legals.index');
