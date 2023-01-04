@@ -4,7 +4,10 @@
     <header>
         <div class="flex-column w-full h-full">
             <div class="relative z-0 banner">
-                <h1 class="text-2xl sm:text-3xl md:text-5xl lg:text-7xl px-8 py-8 sm:px-12 sm:py-12 md:px-16 md:py-16 lg:px-24 lg:py-24 text-[#1747B5] text-right font-semibold">{{ __('resume.index.title') }}</h1>
+                <div class="px-8 py-8 sm:px-12 sm:py-12 md:px-16 md:py-16 lg:px-24 lg:py-24 text-[#1747B5] text-center font-semibold absolute inset-y-0 right-0">
+                    <h1 class="text-2xl sm:text-3xl md:text-5xl lg:text-7xl">Marc COLLET</h1>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-5xl">{{ __('resume.index.title') }}</h2>
+                </div>
             </div>
             <div class="relative block sm:flex md:flex lg:flex justify-around z-10 bottom-8 services text-[#1747B5] m-auto">
                 <div class="shadow font-bold lg:text-xl mb-2 sm:mb-0 md:mb-0 lg:mb-0 sm:w-44 md:w-52 lg:w-72 px-4 py-4 lg:px-8 lg:py-8 leading-none border rounded bg-white text-center m-auto">{!! __('resume.index.services.audit')  !!}</div>
@@ -111,9 +114,7 @@
                 </div>
                 <div class="mb-4">
                     <label for="message" class="block text-sm font-semibold mb-2">{{ __('global.message') }}*</label>
-                    <textarea id="message" name="message" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" rows="4" required>
-                        {{ old('message') }}
-                    </textarea>
+                    <textarea id="message" name="message" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" rows="4" required>{{ old('message') }}</textarea>
                     @if ($errors->has('message'))
                         <p class="text-red-500">{{ $errors->first('message') }}</p>
                     @endif
