@@ -31,15 +31,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    const navElements = document.querySelectorAll('.nav');
+    const anchorElements = document.querySelectorAll('.anchor');
 
-    navElements.forEach(function(navElement) {
-        navElement.addEventListener('click', function() {
+    anchorElements.forEach(function(anchorElement) {
+        anchorElement.addEventListener('click', function() {
             if (document.location.pathname !== '/') {
-                document.location.href = navElement.getAttribute('data-href');
+                document.location.href = anchorElement.getAttribute('data-href');
             }
 
-            scrollToHeading(navElement.getAttribute('data-target'));
+            scrollToHeading(anchorElement.getAttribute('data-target'));
         });
     });
 });

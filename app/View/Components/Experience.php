@@ -9,8 +9,7 @@ use Illuminate\View\View;
 class Experience extends Component
 {
     public function __construct(
-        public string $experience,
-        public string $time,
+        public array $experience,
     ) {
     }
 

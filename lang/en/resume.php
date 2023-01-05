@@ -18,7 +18,21 @@ return [
             'code_review' => 'Code review',
             'static_analysis' => 'Static analysis',
         ],
-        'experiences' => 'MY EXPERIENCES',
+        'experiences' => [
+            'title' => 'MY EXPERIENCES',
+            'graduation' => [
+                'label' => 'Web Development BTS graduation',
+                'date' => 'July 2017',
+            ],
+            'first_job' => [
+                'label' => 'Developer at Nameshield',
+                'date' => 'November 2017',
+            ],
+            'second_job' => [
+                'label' => 'Application Manager at Nameshield',
+                'date' => 'October 2020',
+            ],
+        ],
         'contact' => [
             'title' => 'CONTACT ME',
             'work_with_me' => 'Want to work with me ?',
@@ -29,9 +43,9 @@ return [
         ],
         'download_resume' => 'DOWNLOAD MY RESUME',
         'services' => [
-            'audit' => 'TECHNICAL<br/>AUDIT',
-            'dev' => 'APPLICATION<br/>DEVELOPMENT',
-            'project' => 'PROJECT<br/>MONITORING'
+            'features' => 'FEATURES<br/>DEVELOPMENT',
+            'web' => 'WEBSITE<br/>CREATION',
+            'legacy' => 'REVISION OF<br/>TECHNICAL DEBTS',
         ],
         'legals' => 'Legal Notice',
         'rgpd' => 'Privacy Policy',

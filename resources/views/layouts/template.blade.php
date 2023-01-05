@@ -23,16 +23,16 @@
                 <div class="h-11 w-28 logo"></div>
             </div>
             <div class="lg:text-xl lg:flex-grow lg:flex lg:justify-center mt-3 lg:w-8/12">
-                <a data-href="{{ route('resume.index') . '#about' }}" data-target="about" class="block font-bold cursor-pointer lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5 nav">
+                <a data-href="{{ route('resume.index') . '#about' }}" data-target="about" class="anchor block font-bold cursor-pointer lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5">
                     {{ __('resume.index.about') }}
                 </a>
-                <a data-href="{{ route('resume.index') . '#skills' }}" data-target="skills" class="block font-bold cursor-pointer lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5 nav">
+                <a data-href="{{ route('resume.index') . '#skills' }}" data-target="skills" class="anchor block font-bold cursor-pointer lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5">
                     {{ __('resume.index.skills.title') }}
                 </a>
-                <a data-href="{{ route('resume.index') . '#experiences' }}" data-target="experiences" class="block font-bold cursor-pointer lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5 nav">
-                    {{ __('resume.index.experiences') }}
+                <a data-href="{{ route('resume.index') . '#experiences' }}" data-target="experiences" class="anchor block font-bold cursor-pointer lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5">
+                    {{ __('resume.index.experiences.title') }}
                 </a>
-                <a data-href="{{ route('resume.index') . '#contact' }}" data-target="contact" class="block font-bold cursor-pointer lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5 nav">
+                <a data-href="{{ route('resume.index') . '#contact' }}" data-target="contact" class="anchor block font-bold cursor-pointer lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5">
                     {{ __('resume.index.contact.title') }}
                 </a>
             </div>

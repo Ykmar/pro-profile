@@ -6,7 +6,7 @@
         <div class="hidden lg:flex w-full bg-[#082159] h-0.5"></div>
     </div>
     <div class="mt-3 sm:pr-8">
-        <h3 class="text-lg font-semibold">{{ $experience }}</h3>
-        <time class="block mb-2 text-sm font-normal leading-none text-[#239494]">{{ $time }}</time>
+        <h3 class="text-lg font-semibold">{{ $experience['label'] }}</h3>
+        <time class="block mb-2 text-sm font-normal leading-none text-[#239494]">{{ $experience['date'] }}</time>
     </div>
 </li>

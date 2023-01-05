@@ -18,7 +18,21 @@ return [
             'code_review' => 'Revue de code',
             'static_analysis' => 'Analyse statique',
         ],
-        'experiences' => 'MES EXPÉRIENCES',
+        'experiences' => [
+            'title' => 'MES EXPÉRIENCES',
+            'graduation' => [
+                'label' => 'Diplôme BTS Développement Web',
+                'date' => 'Juillet 2017',
+            ],
+            'first_job' => [
+                'label' => 'Développeur chez Nameshield',
+                'date' => 'Novembre 2017',
+            ],
+            'second_job' => [
+                'label' => 'Responsable d\'applications chez Nameshield',
+                'date' => 'Octobre 2020',
+            ],
+        ],
         'contact' => [
             'title' => 'ME CONTACTER',
             'work_with_me' => 'Envie de travailler avec moi ?',
@@ -29,9 +43,9 @@ return [
         ],
         'download_resume' => 'TÉLÉCHARGER MON CV',
         'services' => [
-            'audit' => 'AUDIT<br/>TECHNIQUE',
-            'dev' => 'DÉVELOPPEMENT<br/>D\'APPLICATIONS',
-            'project' => 'SUIVI<br/>DE PROJETS'
+            'features' => 'DÉVELOPPEMENT<br/>DE FONCTIONNALITÉS',
+            'web' => 'CRÉATION<br/>DE SITES WEB',
+            'legacy' => 'RÉVISION DE<br/>DETTES TECHNIQUES'
         ],
         'legals' => 'Mentions légales',
         'rgpd' => 'Politique de confidentialité',

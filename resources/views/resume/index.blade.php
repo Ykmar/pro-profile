@@ -10,9 +10,9 @@
                 </div>
             </div>
             <div class="relative block sm:flex md:flex lg:flex justify-around z-10 bottom-8 services text-[#1747B5] m-auto">
-                <div class="shadow font-bold lg:text-xl mb-2 sm:mb-0 md:mb-0 lg:mb-0 sm:w-44 md:w-52 lg:w-72 px-4 py-4 lg:px-8 lg:py-8 leading-none border rounded bg-white text-center m-auto">{!! __('resume.index.services.audit')  !!}</div>
-                <div class="shadow font-bold lg:text-xl mb-2 sm:mb-0 md:mb-0 lg:mb-0 sm:w-44 md:w-52 lg:w-72 px-4 py-4 lg:px-8 lg:py-8 leading-none border rounded bg-white text-center m-auto">{!! __('resume.index.services.dev')  !!}</div>
-                <div class="shadow font-bold lg:text-xl sm:w-44 md:w-52 lg:w-72 px-4 py-4 lg:px-8 lg:py-8 leading-none border rounded bg-white text-center m-auto">{!! __('resume.index.services.project')  !!}</div>
+                <div class="shadow font-bold lg:text-xl mb-2 sm:mb-0 md:mb-0 lg:mb-0 sm:w-44 md:w-52 lg:w-72 px-4 py-4 lg:px-8 lg:py-8 leading-none border rounded bg-white text-center m-auto">{!! __('resume.index.services.features')  !!}</div>
+                <div class="shadow font-bold lg:text-xl mb-2 sm:mb-0 md:mb-0 lg:mb-0 sm:w-44 md:w-52 lg:w-72 px-4 py-4 lg:px-8 lg:py-8 leading-none border rounded bg-white text-center m-auto">{!! __('resume.index.services.web')  !!}</div>
+                <div class="shadow font-bold lg:text-xl sm:w-44 md:w-52 lg:w-72 px-4 py-4 lg:px-8 lg:py-8 leading-none border rounded bg-white text-center m-auto">{!! __('resume.index.services.legacy')  !!}</div>
             </div>
         </div>
     </header>
@@ -25,7 +25,7 @@
                 <h2 class="text-5xl font-semibold text-center lg:text-left mb-14">{{ __('resume.index.about') }}</h2>
                 <p class="mb-10">Excogitatum est super his, ut homines quidam ignoti, vilitate ipsa parum cavendi ad colligendos rumores per Antiochiae latera cuncta destinarentur relaturi quae audirent. hi peragranter et dissimulanter honoratorum circulis adsistendo pervadendoque divites domus egentium habitu quicquid noscere poterant vel audire latenter intromissi per posticas in regiam nuntiabant, id observantes conspiratione concordi, ut fingerent quaedam et cognita duplicarent in peius, laudes vero supprimerent Caesaris, quas invitis conpluribus formido malorum inpendentium exprimebat.</p>
                 <div class="text-center lg:text-left">
-                    <button onclick="scrollToHeading('contact')" class="inline-block text-center font-bold px-4 py-4 leading-none border rounded text-white bg-[#1747B5] hover:border-transparent hover:bg-[#103283] mt-4">
+                    <button data-target="contact" class="anchor inline-block text-center font-bold px-4 py-4 leading-none border rounded text-white bg-[#1747B5] hover:border-transparent hover:bg-[#103283] mt-4">
                         {{ __('resume.index.contact.title') }}
                     </button>
                 </div>
@@ -50,12 +50,11 @@
         </div>
     </div>
     <div id="experiences" class="bg-[#C3ECEC] text-[#082159] mt-20 sm:mt-16 lg:mt-28 py-20 sm:py-16 lg:py-28">
-        <h2 class="text-5xl font-semibold text-center pb-10">{{ __('resume.index.experiences') }}</h2>
+        <h2 class="text-5xl font-semibold text-center pb-10">{{ __('resume.index.experiences.title') }}</h2>
         <ol class="items-center flex flex-col-reverse lg:flex-row lg:justify-center sm:w-1/2 md:w-1/2 lg:w-full p-12 m-auto">
-            <x-experience :experience="'Diplôme BTS Développement Web'" :time="'Juillet 2017'"></x-experience>
-            <x-experience :experience="'Développeur chez Nameshield'" :time="'Novembre 2017'"></x-experience>
-            <x-experience :experience="'Responsable d\'applications chez Nameshield'" :time="'Octobre 2020'"></x-experience>
-            <x-experience :experience="'Développeur en freelance'" :time="'Depuis Mai 2023'"></x-experience>
+            <x-experience :experience="__('resume.index.experiences.graduation')"></x-experience>
+            <x-experience :experience="__('resume.index.experiences.first_job')"></x-experience>
+            <x-experience :experience="__('resume.index.experiences.second_job')"></x-experience>
         </ol>
     </div>
     <div class="w-full block md:flex lg:flex">

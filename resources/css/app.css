@@ -38,6 +38,10 @@
         height: 45rem;
     }
 
+    .banner {
+        background-image: url('../../public/images/header-lg.svg');
+    }
+
     .services {
         width: 60rem;
     }
