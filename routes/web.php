@@ -18,3 +18,4 @@ Route::get('/download', [\App\Http\Controllers\ResumeController::class, 'downloa
 Route::post('/contact', [\App\Http\Controllers\ResumeController::class, 'contact'])->name('resume.contact');
 
 Route::get('/legals', \App\Http\Controllers\LegalsController::class)->name('legals.index');
+Route::get('/privacy-policy', \App\Http\Controllers\PrivacyPolicyController::class)->name('privacy-policy.index');

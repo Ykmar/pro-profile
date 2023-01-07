@@ -1,9 +1,9 @@
-@extends('layouts.template')
+@extends('layouts.app')
 @section('content')
     <div class="bg-[#1747B5] font-semibold py-20">
-        <h1 class="text-5xl text-center text-white">{{ __('resume.index.legals') }}</h1>
+        <h1 class="text-5xl text-center text-white">{{ __('views.legals.index.title') }}</h1>
     </div>
-    <div class="w-1/2 text-[#082159] m-auto mt-5 mb-5">
+    <div class="w-1/2 text-[#082159] m-auto mt-8 mb-5">
         <h2 class="text-2xl font-semibold">1. Présentation du site</h2>
         <div class="mt-4">
             <p>En vertu de l’article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique, il est précisé aux utilisateurs du site <a class="underline" href="https://www.marc-collet.fr">www.marc-collet.fr</a> l’identité des différents intervenants dans le cadre de sa réalisation et de son suivi :</p>
@@ -26,7 +26,9 @@
             </p>
         </div>
         <div class="mt-4">
-            <strong>Crédits :</strong> Ce <a class="underline" href="https://www.aetherium.fr/generateur-de-mentions-legales-et-de-politique-de-confidentialite/" target="_blank" rel="noopener">modèle d’informations légales</a> est offert par <a class="underline" href="https://www.aetherium.fr/" target="_blank" rel="noopener">L’Aetherium, agence de communication en Côtes d’Armor</a>. La partie mentions légales est une adaptation de l’œuvre proposée par <a class="underline" title="mentions legales" href="https://www.subdelirium.com/generateur-de-mentions-legales/" target="_blank" rel="noopener">SubDelirium</a>. La partie politique de confidentialité est basée sur une œuvre originale de <a class="underline" title="mentions legales" href="https://www.aetherium.fr/generateur-de-mentions-legales-et-de-politique-de-confidentialite/" target="_blank" rel="noopener">L’Aetherium</a>.
+            <p>
+                <strong>Crédits :</strong> Ce <a class="underline" href="https://www.aetherium.fr/generateur-de-mentions-legales-et-de-politique-de-confidentialite/" target="_blank" rel="noopener">modèle d’informations légales</a> est offert par <a class="underline" href="https://www.aetherium.fr/" target="_blank" rel="noopener">L’Aetherium, agence de communication en Côtes d’Armor</a>. La partie mentions légales est une adaptation de l’œuvre proposée par <a class="underline" title="mentions legales" href="https://www.subdelirium.com/generateur-de-mentions-legales/" target="_blank" rel="noopener">SubDelirium</a>. La partie politique de confidentialité est basée sur une œuvre originale de <a class="underline" title="mentions legales" href="https://www.aetherium.fr/generateur-de-mentions-legales-et-de-politique-de-confidentialite/" target="_blank" rel="noopener">L’Aetherium</a>.
+            </p>
         </div>
     </div>
     <div class="w-1/2 text-[#082159] m-auto mt-5 mb-5">
@@ -80,7 +82,7 @@
     <div class="w-1/2 text-[#082159] m-auto mt-5 mb-5">
         <h2 class="text-2xl font-semibold">7. Liens hypertextes et cookies</h2>
         <div class="mt-4">
-            Le site <a class="underline" href="https://www.marc-collet.fr">www.marc-collet.fr</a> contient un certain nombre de liens hypertextes vers d’autres sites, mis en place avec l’autorisation de Marc COLLET. Cependant, Marc COLLET n’a pas la possibilité de vérifier le contenu des sites ainsi visités, et n’assumera en conséquence aucune responsabilité de ce fait.
+            <p>Le site <a class="underline" href="https://www.marc-collet.fr">www.marc-collet.fr</a> contient un certain nombre de liens hypertextes vers d’autres sites, mis en place avec l’autorisation de Marc COLLET. Cependant, Marc COLLET n’a pas la possibilité de vérifier le contenu des sites ainsi visités, et n’assumera en conséquence aucune responsabilité de ce fait.</p>
         </div>
         <div class="mt-4">
             <p>La navigation sur le site <a class="underline" href="https://www.marc-collet.fr">www.marc-collet.fr</a> est susceptible de provoquer l’installation de cookies sur l’ordinateur de l’utilisateur. Un cookie est un fichier de petite taille, qui ne permet pas l’identification de l’utilisateur, mais qui enregistre des informations relatives à la navigation d’un ordinateur sur un site. Les données ainsi obtenues visent à faciliter la navigation ultérieure sur le site, et ont également vocation à permettre diverses mesures de fréquentation.</p>
@@ -115,7 +117,7 @@
             </ul>
         </div>
     </div>
-    <div class="w-1/2 text-[#082159] m-auto mt-5 mb-5">
+    <div class="w-1/2 text-[#082159] m-auto mt-5 mb-8">
         <h2 class="text-2xl font-semibold">10. Lexique</h2>
         <div class="mt-4">
             <ul class="list-disc ml-6 mt-4">

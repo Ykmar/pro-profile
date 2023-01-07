@@ -9,5 +9,6 @@ return [
     'message' => 'Message',
     'send' => 'Send',
     'menu' => 'Menu',
+    'mandatory_fields_notice' => 'Fields followed by an * are mandatory',
 
 ];

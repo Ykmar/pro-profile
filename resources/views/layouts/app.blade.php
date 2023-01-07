@@ -24,21 +24,21 @@
             </div>
             <div class="lg:text-xl lg:flex-grow lg:flex lg:justify-center mt-3 lg:w-8/12">
                 <a data-href="{{ route('resume.index') . '#about' }}" data-target="about" class="anchor block font-bold cursor-pointer lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5">
-                    {{ __('resume.index.about') }}
+                    {{ __('views.layouts.header.about') }}
                 </a>
                 <a data-href="{{ route('resume.index') . '#skills' }}" data-target="skills" class="anchor block font-bold cursor-pointer lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5">
-                    {{ __('resume.index.skills.title') }}
+                    {{ __('views.layouts.header.skills') }}
                 </a>
                 <a data-href="{{ route('resume.index') . '#experiences' }}" data-target="experiences" class="anchor block font-bold cursor-pointer lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5">
-                    {{ __('resume.index.experiences.title') }}
+                    {{ __('views.layouts.header.experiences') }}
                 </a>
                 <a data-href="{{ route('resume.index') . '#contact' }}" data-target="contact" class="anchor block font-bold cursor-pointer lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5">
-                    {{ __('resume.index.contact.title') }}
+                    {{ __('views.layouts.header.contact') }}
                 </a>
             </div>
             <div class="mt-1 lg:text-right lg:w-2/12">
                 <a href="{{ route('resume.download') }}" class="inline-block text-xs px-2 py-4 leading-none border rounded font-bold text-white bg-[#1747B5] hover:border-transparent hover:bg-[#103283] lg:mt-0">
-                    {{ __('resume.index.download_resume') }}
+                    {{ __('views.layouts.header.download_resume') }}
                 </a>
             </div>
         </div>
@@ -49,9 +49,9 @@
     @yield('content')
     <footer class="bg-[#082159] text-center lg:text-left">
         <div class="text-white text-center p-4">
-            <a class="hover:text-gray-200" href="{{ route('legals.index') }}">{{ __('resume.index.legals') }}</a>
+            <a class="hover:text-gray-200" href="{{ route('legals.index') }}">{{ __('views.layouts.footer.legals') }}</a>
             |
-            <a class="hover:text-gray-200" href="#">{{ __('resume.index.rgpd') }}</a>
+            <a class="hover:text-gray-200" href="{{ route('privacy-policy.index') }}">{{ __('views.layouts.footer.privacy-policy') }}</a>
         </div>
     </footer>
 </body>

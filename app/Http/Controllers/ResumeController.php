@@ -37,6 +37,6 @@ class ResumeController extends Controller
 
         return redirect()->route('resume.index')
             ->withFragment('contact')
-            ->with('success', __('resume.index.contact.success'));
+            ->with('success', __('views.resume.index.contact.success'));
     }
 }
