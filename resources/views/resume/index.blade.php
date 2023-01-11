@@ -51,10 +51,10 @@
     </div>
     <div id="experiences" class="bg-[#C3ECEC] text-[#082159] mt-20 sm:mt-16 lg:mt-28 py-20 sm:py-16 lg:py-28">
         <h2 class="text-5xl font-semibold text-center pb-10">{{ __('views.resume.index.experiences.title') }}</h2>
-        <ol class="items-center flex flex-col-reverse lg:flex-row lg:justify-center sm:w-1/2 md:w-1/2 lg:w-full p-12 m-auto">
-            <x-experience :experience="__('views.resume.index.experiences.graduation')"></x-experience>
-            <x-experience :experience="__('views.resume.index.experiences.first_job')"></x-experience>
+        <ol class="items-center block lg:flex lg:flex-row-reverse lg:flex-row lg:justify-center sm:w-1/2 md:w-1/2 lg:w-full p-12 m-auto">
             <x-experience :experience="__('views.resume.index.experiences.second_job')"></x-experience>
+            <x-experience :experience="__('views.resume.index.experiences.first_job')"></x-experience>
+            <x-experience :experience="__('views.resume.index.experiences.graduation')"></x-experience>
         </ol>
     </div>
     <div class="w-full block md:flex lg:flex">
