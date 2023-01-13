@@ -25,7 +25,7 @@
                 </button>
             </div>
         </div>
-        <div class="w-full block navbar-menu hidden lg:text-xl lg:flex-grow lg:flex lg:justify-center lg:items-center mt-3">
+        <div class="w-full block navbar-menu hidden lg:text-xl lg:flex lg:justify-center lg:items-center mt-3">
             <div class="hidden lg:block lg:w-32">
                 <div class="h-11 w-28 logo"></div>
             </div>
