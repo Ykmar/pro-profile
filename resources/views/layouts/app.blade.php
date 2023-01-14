@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Resume</title>
+    <title>{{ __('views.resume.title') }}</title>
+    <link rel="icon" href="/images/logo-v1.svg" title="{{ __('views.resume.title') }}">
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
 </head>
@@ -25,23 +26,25 @@
                 </button>
             </div>
         </div>
-        <div class="w-full block navbar-menu hidden lg:text-xl lg:flex lg:justify-center lg:items-center mt-3">
-            <div class="hidden lg:block lg:w-32">
-                <div class="h-11 w-28 logo"></div>
+        <div class="w-full flex flex-col navbar-menu hidden lg:text-xl lg:flex lg:flex-row lg:justify-center lg:items-center mt-3">
+            <div class="hidden lg:block lg:w-40">
+                <a href="{{ route('resume.index') }}">
+                    <div class="h-11 w-28 logo"></div>
+                </a>
             </div>
-            <a data-href="{{ route('resume.index') . '#about' }}" data-target="about" class="anchor block font-bold cursor-pointer lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5">
+            <a data-href="{{ route('resume.index') . '#about' }}" data-target="about" class="anchor self-end font-bold cursor-pointer lg:self-auto lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5">
                 {{ __('views.layouts.header.about') }}
             </a>
-            <a data-href="{{ route('resume.index') . '#skills' }}" data-target="skills" class="anchor block font-bold cursor-pointer lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5">
+            <a data-href="{{ route('resume.index') . '#skills' }}" data-target="skills" class="anchor self-end font-bold cursor-pointer lg:self-auto lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5">
                 {{ __('views.layouts.header.skills') }}
             </a>
-            <a data-href="{{ route('resume.index') . '#experiences' }}" data-target="experiences" class="anchor block font-bold cursor-pointer lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5">
+            <a data-href="{{ route('resume.index') . '#experiences' }}" data-target="experiences" class="anchor self-end font-bold cursor-pointer lg:self-auto lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5">
                 {{ __('views.layouts.header.experiences') }}
             </a>
-            <a data-href="{{ route('resume.index') . '#contact' }}" data-target="contact" class="anchor block font-bold cursor-pointer lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5">
+            <a data-href="{{ route('resume.index') . '#contact' }}" data-target="contact" class="anchor self-end font-bold cursor-pointer lg:self-auto lg:inline-block lg:mt-0 hover:text-[#1747B5] mr-5">
                 {{ __('views.layouts.header.contact') }}
             </a>
-            <div class="lg:text-right lg:w-40">
+            <div class="self-end lg:text-right lg:self-auto lg:w-44">
                 <a href="{{ route('resume.download') }}" class="inline-block text-xs px-2 py-4 leading-none border rounded font-bold text-white bg-[#1747B5] hover:border-transparent hover:bg-[#103283]">
                     {{ __('views.layouts.header.download_resume') }}
                 </a>
