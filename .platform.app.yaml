@@ -1,0 +1,31 @@
+name: nom_de_votre_application
+type: php:8.1
+disk: 1024
+routes:
+  - path: '/'
+    type: upstream
+    upstream: app:http
+web:
+  locations:
+    '/':
+      try_files: '$uri $uri/ /index.php?$query_string'
+      expires: 1h
+      allow: true
+      headers:
+        - "Cache-Control: max-age=31536000, public"
+  upstreams:
+    app:
+      protocol: fastcgi
+      pass: "unix:/run/php/php8.1-fpm.sock"
+
+mounts:
+  'app/storage':
+    source: local
+    source_path: 'storage'
+    cache:
+      enabled: true
+      persistence: 15m
+      after_cache_script: |
+        if [ ! -f 'public/storage/index.html' ]; then
+          cp public/index.html public/storage/index.html;
+        fi
