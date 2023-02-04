@@ -37,7 +37,7 @@
                 <p class="mb-4">{{ __('views.resume.index.about.bonus_skills') }}</p>
                 <p class="mb-4">{{ __('views.resume.index.about.outro') }}</p>
                 <div class="text-center lg:text-left">
-                    <button data-target="contact" class="anchor inline-block text-center font-bold px-4 py-4 leading-none border rounded text-white bg-[#1747B5] hover:border-transparent hover:bg-[#103283] mt-4">
+                    <button title="Contact" data-target="contact" class="anchor inline-block text-center font-bold px-4 py-4 leading-none border rounded text-white bg-[#1747B5] hover:border-transparent hover:bg-[#103283] mt-4">
                         {{ __('views.resume.index.contact.title') }}
                     </button>
                 </div>
@@ -78,10 +78,10 @@
             </div>
             <p class="text-5xl font-semibold text-white text-center pb-10">{{ __('views.resume.index.contact.follow') }}</p>
             <div class="text-center">
-                <a class="text-5xl text-white pb-10" href="https://www.linkedin.com/in/marc-collet-32008685/">
+                <a title="Linkedin" class="text-5xl text-white pb-10" href="https://www.linkedin.com/in/marc-collet-32008685/">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
-                <a class="text-5xl text-white pb-10" href="https://github.com/Ykmar">
+                <a title="Github" class="text-5xl text-white pb-10" href="https://github.com/Ykmar">
                     <i class="fa-brands fa-github"></i>
                 </a>
             </div>
@@ -134,7 +134,7 @@
                     <p class="text-xs text-gray-500">{{ __('global.mandatory_fields_notice') }}</p>
                 </div>
                 <div class="mb-4">
-                    <button type="submit" class="bg-[#1747B5] hover:bg-[#103283] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">{{ __('global.send') }}</button>
+                    <button title="Send Contact Request" type="submit" class="bg-[#1747B5] hover:bg-[#103283] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">{{ __('global.send') }}</button>
                 </div>
             </form>
         </div>

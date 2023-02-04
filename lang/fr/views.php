@@ -4,6 +4,10 @@ return [
 
     'layouts' => [
 
+        'meta' => [
+            'description' => 'Prestations disponibles d\'un développeur en freelance'
+        ],
+
         'header' => [
             'about' => 'À PROPOS',
             'skills' => 'MES COMPÉTENCES',

@@ -11,7 +11,7 @@
             <p>En France, les données personnelles sont notamment protégées par la loi n° 78-87 du 6 janvier 1978, la loi n° 2004-801 du 6 août 2004, l’article L. 226-13 du Code pénal, la Directive Européenne du 24 octobre 1995 et enfin par le règlement n° 2016/679 (dit règlement général sur la protection des données ou RGPD).</p>
         </div>
         <div class="mt-4">
-            <p>En tout état de cause Marc COLLET ne collecte des informations personnelles relatives à l’utilisateur que pour le besoin de certains services proposés par le site <a class="underline" href="https://www.marc-collet.fr">www.marc-collet.fr</a>. L’utilisateur fournit ces informations en toute connaissance de cause, notamment lorsqu’il procède par lui-même à leur saisie.</p>
+            <p>En tout état de cause Marc COLLET ne collecte des informations personnelles relatives à l’utilisateur que pour le besoin de certains services proposés par le site <a title="Website URL" class="underline" href="https://www.marc-collet.fr">www.marc-collet.fr</a>. L’utilisateur fournit ces informations en toute connaissance de cause, notamment lorsqu’il procède par lui-même à leur saisie.</p>
         </div>
     </div>
     <div class="w-1/2 text-[#082159] m-auto mt-5 mb-5">
@@ -62,7 +62,7 @@
             <p>Les renseignements personnels collectés sont conservés dans un environnement sécurisé. Les informations de statistiques de visite sont effacées automatiquement au bout d’un an. Les personnes travaillant pour Marc COLLET sont tenues de respecter la confidentialité de vos informations. Pour assurer la sécurité de vos renseignements personnels, les mesures suivantes sont mises en place : Protocole SSL (Secure Sockets Layer), Sauvegarde informatique</p>
         </div>
         <div class="mt-4">
-            <p>Aucune information personnelle de l’utilisateur du site <a class="underline" href="https://www.marc-collet.fr">www.marc-collet.fr</a> n’est publiée à l’insu de l’utilisateur, échangée, transférée, cédée ou vendue sur un support quelconque à des tiers. Par ailleurs, je m’engage à maintenir un haut degré de confidentialité afin d’assurer la confidentialité de vos transactions. Toutefois, comme aucun mécanisme n’offre une sécurité maximale, une part de risque est toujours présente lorsque l’on utilise Internet pour transmettre des renseignements personnels.</p>
+            <p>Aucune information personnelle de l’utilisateur du site <a title="Website URL" class="underline" href="https://www.marc-collet.fr">www.marc-collet.fr</a> n’est publiée à l’insu de l’utilisateur, échangée, transférée, cédée ou vendue sur un support quelconque à des tiers. Par ailleurs, je m’engage à maintenir un haut degré de confidentialité afin d’assurer la confidentialité de vos transactions. Toutefois, comme aucun mécanisme n’offre une sécurité maximale, une part de risque est toujours présente lorsque l’on utilise Internet pour transmettre des renseignements personnels.</p>
         </div>
     </div>
     <div class="w-1/2 text-[#082159] m-auto mt-5 mb-8">
